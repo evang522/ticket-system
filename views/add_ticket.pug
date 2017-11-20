@@ -1,0 +1,35 @@
+html
+	include ../public/header.html
+	body
+		include ../views/head_body.pug	
+		h1 Submit Ticket
+		form(action="/add", method="POST")
+			p  Customer Name:
+			textarea#techNotes(name='Name' cols='35' rows='5')
+			br
+			p Date: 
+			textarea#techNotes(name='Date' cols='35' rows='5')
+			br
+			p Email Address:
+			textarea#techNotes(name='Email' cols='35' rows='5')
+			br
+			p  Age:
+			textarea#techNotes(name='Age' cols='35' rows='5')
+			br
+			p Address:
+			textarea#techNotes(name='Address' cols='35' rows='5')
+			br
+			p Describe what kind of technology your request regards. Make and model are helpful to know.
+			textarea#techNotes(name='ComputerInfo' cols='35' rows='5') 
+			br
+			p  Description of Problem:
+			textarea#techNotes(name='Description' cols='35' rows='5')
+			br
+			div#hidd
+				p Ticket Notes (For Tech):
+				textarea#techNotes(name='TicketNotes' cols='85' rows= '15') 
+			br
+			br
+			br
+			button.generalButton(action='submit') Submit
+		

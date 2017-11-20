@@ -1,0 +1,30 @@
+html
+	include ../public/header.html
+	body
+		include ../views/head_body.pug	
+		div.cont
+			h1.title Praktisch Ticket system
+			br
+			br
+			a(href='./add')
+				button.generalButton Add Ticket
+			br
+			br
+			a(href='./tickets')
+				button.generalButton View All Tickets
+			br
+			br
+			br
+			if tickets.length == 0
+				div#status
+					p No Tickets Currently!  :) 
+			if tickets.length == 1
+				div#status
+					p There is #{tickets.length} unresolved ticket.
+			if tickets.length > 1
+				div#status
+					p There are #{tickets.length} unresolved tickets
+		
+
+
+		

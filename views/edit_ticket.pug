@@ -1,0 +1,41 @@
+html
+	head
+		link(rel='stylesheet', href='../style.css')
+		link(href='https://fonts.googleapis.com/css?family=Slabo+27px', rel='stylesheet')
+		title Rundumservice Ticketing System
+		meta(name='viewport', content='width=device-width, initial-scale=1.0')
+
+	body
+		include ../views/head_body.pug	
+		h1 Submit Ticket
+		form(method='POST', action='/edit/'+ ticket._id)
+			p  Customer Name:
+			textarea#techNotes(name='Name', cols='35' rows='5' required='required') #{ticket.Name}
+			br
+			p Date: 
+			textarea#techNotes(name='Date' cols='35' rows='5' required='required') #{ticket.Date} 
+			br
+			p Email Address:
+			textarea#techNotes(name='Email' cols='35' rows='5' required='required') #{ticket.Email}
+			br
+			p  Age:
+			textarea#techNotes(name='Age' cols='35' rows='5' required='required') #{ticket.Age}
+			br
+			p Address:
+			textarea#techNotes(name='Address' cols='35' rows='5' required='required') #{ticket.Address}
+			br
+			p Computer Type:
+			textarea#techNotes(name='ComputerInfo' cols='35' rows='5' required='required') #{ticket.ComputerInfo}
+			br
+			p  Describe what kind of technology your request regards. Make and model are helpful to know.
+			textarea#techNotes(name='Description' cols='35' rows='5' required='required') #{ticket.Description}
+			br
+			p Ticket Notes (For Tech):
+			textarea#techNotes(name='TicketNotes' cols='85' rows= '15') #{ticket.TicketNotes}
+			br
+			br
+			br
+			button.generalButton(action='submit') Submit
+
+		form(action='/confirm/'+ ticket._id)
+							button.generalButton#return Delete Ticket

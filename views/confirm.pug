@@ -1,0 +1,14 @@
+html
+		include ../public/header.html
+		link(rel='stylesheet' href='../style.css')
+		body
+			include ../views/head_body.pug	
+			br
+			br
+			br
+			h2 Are you sure you want to delete this ticket? 
+			br
+			form(method='POST', action='/confirm/' + ticket)
+				button.generalButton#return Delete Ticket
+			form(action='/tickets')
+				button.generalButton Nevermind

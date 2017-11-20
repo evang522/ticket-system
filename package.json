@@ -1,0 +1,23 @@
+{
+  "name": "cusdat",
+  "version": "1.0.0",
+  "description": "A database of Customers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Evan Garrett",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "*",
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.3",
+    "passport": "^0.4.0",
+    "passport-local": "^1.0.0",
+    "passport-http": "*",
+    "pug": "^2.0.0-rc.4",
+    "express-session": "*",
+    "cookie-parser":"*"
+  }
+}

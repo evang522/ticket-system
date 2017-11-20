@@ -1,0 +1,36 @@
+html
+	link(rel='stylesheet' href='../style.css')
+	body
+		include ../views/head_body.pug	
+		br
+		each ticket, i in tickets
+			div.ticketInfo
+				div.infoBlock
+					h3 Name
+					p #{ticket.Name}
+				div.infoBlock
+					h3 Email
+					p #{ticket.Email}
+				div.infoBlock
+					h3 Age
+					p #{ticket.Age}
+				div.infoBlock
+					h3 Address
+					p #{ticket.Address}
+			div.ticketInfo
+				div.infoBlock
+					h3 Date Submitted
+					p #{ticket.Date}
+				div.infoBlock
+					h3 Technology info
+					p #{ticket.ComputerInfo}
+			div.ticketInfo
+				div.infoBlock
+					h3 Description of Issue
+					p #{ticket.Description}
+			div.ticketInfo
+				div.infoBlock
+					h3 Progress Notes
+					p #{ticket.TicketNotes}
+
+

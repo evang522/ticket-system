@@ -1,0 +1,15 @@
+html
+	include ../public/header.html
+	body
+		include ../views/head_body.pug
+		br
+		h1 Login to EFS
+		br
+		div.login
+			form(action='/login' method='POST')
+				br
+				p User Email: &nbsp
+					input(name='user')
+				p Password:&nbsp &nbsp
+					input(name='password' type='password')
+				button#loginButton(action='submit') Login

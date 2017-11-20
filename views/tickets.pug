@@ -1,0 +1,25 @@
+html
+		include ../public/header.html
+		body
+			include ../views/head_body.pug	
+			h1 All Tickets
+			br
+			br
+			div.tickCont
+				ul.tickList
+					if tickets.length == 0
+						p <i>Looks like there are no Tickets at the Moment! &nbsp :) 
+						br
+					else
+					div.berContainer
+						each ticket, i in tickets
+							div.ber 
+								a(href='/view/' + ticket._id) &nbsp #{ticket.Name} on #{ticket.Date} regarding  #{ticket.Description}
+								//- a(href="/edit/"+ticket._id style="color:lightblue")
+								form(action='/edit/'+ticket._id )
+									button.ticketList Edit
+								form(action='/confirm/'+ ticket._id)
+									button.ticketList Delete
+					br
+					a(href="./").foot
+						button.generalButton Home
